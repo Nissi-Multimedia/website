@@ -1,0 +1,12 @@
+.app__catalog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .catalog__title {
+        span {
+            color: var(--black-color);
+        }
+    }
+}

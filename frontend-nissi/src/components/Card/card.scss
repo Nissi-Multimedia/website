@@ -1,0 +1,39 @@
+.app__card {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: flex-start;
+    min-height: 30vh;
+    min-width: 30vw;
+
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: rgba(221, 27, 27, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+    .card-image {
+        height: 60%;
+        border-radius: 1.5rem;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+        margin-bottom: 1rem;
+        
+        img {
+            width: 100%
+        }
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+
+        .info-title {
+            font-size: 1rem;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+        }
+
+        .info-content {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+    }
+}
