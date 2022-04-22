@@ -1,12 +1,28 @@
 import React from "react";
 import "./Catalog.scss";
 import { Card } from "./../../components";
+import {images} from './../../constants'
 
 const catalog = [
 	{
 		title: "Brand Image Management",
-		content: "",
-		image: "",
+		content: "We build, grow and manage your brand",
+		image: images.brandImage,
+	},
+	{
+		title: "Digital Marketing Activation",
+		content: "Unlock your online growth potential",
+		image: images.marketingCat,
+	},
+	{
+		title: "Audio-visual Creatives",
+		content: "Capture life's beautiful moments",
+		image: images.audioVisualCat,
+	},
+	{
+		title: "Web Development",
+		content: "Envision your ideas, let's make manifest",
+		image: images.webUi,
 	},
 ];
 

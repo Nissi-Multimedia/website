@@ -26,7 +26,7 @@ const Header = () => {
 							className="sub"
 						>
 							<p className="p-text">
-								Choose Nissi as your digital margeting agency and propel your
+								Choose Nissi as your digital marketing agency and propel your
 								business to new heights with our award-winning digital marketing
 								services and technology platform
 							</p>

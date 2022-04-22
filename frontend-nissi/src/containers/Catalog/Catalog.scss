@@ -3,10 +3,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 2rem;
 
     .catalog__title {
         span {
             color: var(--black-color);
+        }
+    }
+
+    .catalog__items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        // overflow-x: scroll;
+        padding: 1rem;
+        justify-content: center;
+        margin: 3rem 0;
+
+        .app__card {
+            margin-right: 2rem;
+
+            &:hover {
+                background-color: rgba(221, 27, 27, 0.6);
+                box-shadow: rgba(204, 219, 232, 0.6) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+            }
         }
     }
 }

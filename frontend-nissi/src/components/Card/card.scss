@@ -4,20 +4,21 @@
     justify-items: flex-start;
     align-items: flex-start;
     min-height: 30vh;
-    min-width: 30vw;
+    width: 20vw;
+    transition: all 300ms ease-in-out;
 
     padding: 1.5rem;
     border-radius: 1.5rem;
-    box-shadow: rgba(221, 27, 27, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    box-shadow: rgba(221, 27, 27, 0.6) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 
     .card-image {
-        height: 60%;
-        border-radius: 1.5rem;
-        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-        margin-bottom: 1rem;
-        
+        height: auto;
+
         img {
-            width: 100%
+            border-radius: 1rem;
+            box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+            margin-bottom: 1rem;
+            width: 100%;
         }
     }
 
@@ -32,8 +33,8 @@
         }
 
         .info-content {
-            font-size: 1.5rem;
-            font-weight: 800;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
     }
 }
