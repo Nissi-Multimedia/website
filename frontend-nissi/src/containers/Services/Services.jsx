@@ -1,6 +1,7 @@
 import React from "react";
 import { images } from "./../../constants";
 import { AiOutlinePlus } from "react-icons/ai";
+import { motion } from "framer-motion";
 import "./Services.scss";
 
 const services = [
@@ -41,10 +42,17 @@ const Services = () => {
 			</div>
 
 			<div className="app__services-content">
-				{services.map((item, index) => (
-					<div key={index} className="content-item" id={`item${index}`}>
+				{services.map((item, i) => (
+					<motion.div
+						initial={{ opacity: 0, translateX: i % 2 === 0 ? -50 : 50, translateY: -50 }}
+						whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
+						transition={{ duration: 0.5, delay: i * 0.3 }}
+						key={i}
+						className="content-item"
+						id={`item${i}`}
+					>
 						<div className="item-logo">
-							<img src={item.logo} alt={index} />
+							<img src={item.logo} alt={i} />
 						</div>
 						<span>{item.title}</span>
 						{item.list.map((litem, id) => (
@@ -52,7 +60,7 @@ const Services = () => {
 								<AiOutlinePlus /> {litem}
 							</span>
 						))}
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</div>

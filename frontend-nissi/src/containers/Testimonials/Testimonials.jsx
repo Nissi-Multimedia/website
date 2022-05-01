@@ -1,12 +1,13 @@
 import React from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircle } from 'react-icons/bs'
+import { images } from './../../constants'
 import "./Testimonials.scss";
 
 const Testimonials = () => {
 	return (
 	<div className="app__testimonial">
 		<div className="testimonial__image">
-
+			<img alt="profile" src={images.profile} />
 		</div>
 
 		<div className="testimonials">

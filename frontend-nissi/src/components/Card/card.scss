@@ -8,14 +8,14 @@
     transition: all 300ms ease-in-out;
 
     padding: 1.5rem;
-    border-radius: 1.5rem;
+    // border-radius: 1.5rem;
     box-shadow: rgba(221, 27, 27, 0.6) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 
     .card-image {
         height: auto;
 
         img {
-            border-radius: 1rem;
+            // border-radius: 1rem;
             box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
             margin-bottom: 1rem;
             width: 100%;

@@ -11,6 +11,9 @@ import brandImage from "./../assets/brandimage.jpg";
 import audioVisualCat from "./../assets/audio-visual-cat.png";
 import marketingCat from "./../assets/marketing-cat.png";
 import webUi from "./../assets/webui.png";
+import profile from "./../assets/profile.jpg";
+import contact from './../assets/contact.jpg';
+import footerLogo from './../assets/footer-logo.png';
 
 const images = {
 	logo,
@@ -26,5 +29,8 @@ const images = {
 	audioVisualCat,
 	marketingCat,
 	webUi,
+	profile,
+	contact,
+	footerLogo
 };
 export default images;

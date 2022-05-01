@@ -1,0 +1,50 @@
+.app__contact {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,1) 100%), url('./../../assets/contact.jpg');
+    background-size: cover;
+    height: 80vh;
+    // padding: 0 10rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-attachment: fixed;
+    // background-color: linear-gradient(0deg, rgba());
+
+    .contact__info {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        
+        .hero-text {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--black-color);
+        }
+
+        .p-text {
+            text-align: center;
+
+            white-space: nowrap;
+            font-size: 1.3rem;
+            color: var(--black-color);
+        }
+
+        // span{
+        //     width: 70%;
+        // }
+    }
+
+    .contact__banner {
+        flex: 0.4;
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+}
