@@ -14,6 +14,8 @@ import webUi from "./../assets/webui.png";
 import profile from "./../assets/profile.jpg";
 import contact from './../assets/contact.jpg';
 import footerLogo from './../assets/footer-logo.png';
+import brandImageBg from './../assets/brand-imagebg.jpg';
+import marketingBg from './../assets/marketingbg.jpg';
 
 const images = {
 	logo,
@@ -31,6 +33,10 @@ const images = {
 	webUi,
 	profile,
 	contact,
-	footerLogo
+	footerLogo,
+	brandImageBg,
+	marketingBg
 };
-export default images;
+
+export default images
+

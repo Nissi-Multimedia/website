@@ -1,8 +1,37 @@
 import React from "react";
-import { images } from "./../../constants";
-import { RiSendPlaneFill } from "react-icons/ri";
-import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import "./Footer.scss";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { RiSendPlaneFill } from "react-icons/ri";
+import { images } from "./../../constants";
+
+const footer_links = [
+	{
+		name: "Company",
+		links: [
+			{
+				name: "About Us",
+				link: "/About",
+			},
+			{
+				name: "Contact Us",
+				link: "/Contact",
+			},
+			{
+				name: "Pricing",
+				link: "/pricing",
+			},
+		],
+	},
+
+	{
+		name: "Support",
+		links: [
+			{ name: "Privacy Policy", link: "/Privacy" },
+			{ name: "Terms of Service", link: "/Terms" },
+			{ name: "Legal", link: "/Legal" },
+		],
+	},
+];
 
 const Footer = () => {
 	return (
@@ -15,36 +44,18 @@ const Footer = () => {
 						Result driven positioning expertly done.
 					</span>
 				</div>
-
-				<div className="footer__links">
-					<span>Company</span>
-					<ul>
-						<li>
-							<a href="#">About Us</a>
-						</li>
-						<li>
-							<a href="#">Contact Us</a>
-						</li>
-						<li>
-							<a href="#">Pricing</a>
-						</li>
-					</ul>
-				</div>
-
-				<div className="footer__links">
-					<span>Support</span>
-					<ul>
-						<li>
-							<a href="#">Privacy Policy</a>
-						</li>
-						<li>
-							<a href="#">Terms of Service</a>
-						</li>
-						<li>
-							<a href="#">Legal</a>
-						</li>
-					</ul>
-				</div>
+				{footer_links.map((item, index) => (
+					<div className="footer__links" key={index}>
+						<span>{item.name}</span>
+						<div>
+							{item.links.map((lnk, i) => (
+								<li key={i}>
+									<a href={lnk.link}>{lnk.name}</a>
+								</li>
+							))}
+						</div>
+					</div>
+				))}
 
 				<div className="newsLetter">
 					<span>Stay up to Date</span>
@@ -57,17 +68,15 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-
 			<div className="footer__copyright">
-				<span>Copyright 2022 Designed By Nissi Multimedia</span>
+				<span> Copyright &copy; 2022 Designed By Nissi Multimedia </span>
 				<div className="icon__links">
-					<a href="#">
+					<a href="https://instagram.com/nissimultimedia?igshid=YmMyMTA2M2Y=">
 						<BsInstagram />
 					</a>
-					<a href="#">
+					<a href="https://www.linkedin.com/company/nissi-multimedia/">
 						<BsLinkedin />
 					</a>
-
 				</div>
 			</div>
 		</div>

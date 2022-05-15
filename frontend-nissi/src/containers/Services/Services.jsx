@@ -1,36 +1,29 @@
 import React from "react";
 import { images } from "./../../constants";
-import { AiOutlinePlus } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { BsArrowRight } from "react-icons/bs";
 import "./Services.scss";
 
 const services = [
 	{
 		title: "Brand Image Management",
 		logo: images.branding,
-		list: [
-			"Logo Design",
-			"Audio - Visual Content",
-			"Product Label Design",
-			"Flyers",
-			"Book Design",
-		],
+		info: "We create category-defining brands that thrive at the intersection of clarity and purpose, positioned to matter in culture through shared values and goals",
 	},
 	{
 		title: "Digital Marketing Activation",
 		logo: images.marketing,
-		list: ["Social Media Content", "Music Album Art", "Ad Campaigns"],
+		info: "Nissi is a website design agency that balances minimalistic design, bullet-proof strategy and utility by placing user's needs at the centre of the web design and development process",
 	},
 	{
 		title: "Audio-visual Creatives",
 		logo: images.audioVisual,
-		list: ["Photography", "Videography", "Video Editing"],
+		info: "Combining agile and development with strategic thinking, our digital products and services bridge the gap between physical and digital experiences to make clients digital ambitions a reality.",
 	},
 	{
 		title: "Web Development",
 		logo: images.webDev,
-
-		list: ["UI/UX design", "Web App Development", "Website Management"],
+		info: "We produce category-defining advertising and marketing that connects brands with their customers",
 	},
 ];
 
@@ -39,12 +32,22 @@ const Services = () => {
 		<div className="app__services">
 			<div className="app__services-title">
 				<span className="hero-text">All Services</span>
+				<span className="title-text">
+					We craft engaging brands and digital experiences that define culture
+					and elevate brands to achieve unprecedented growth. Since day one, our
+					focus has been on providing strategies and services that position our
+					clients to succeed in today’s dynamic, constantly evolving world.
+				</span>
 			</div>
 
 			<div className="app__services-content">
 				{services.map((item, i) => (
 					<motion.div
-						initial={{ opacity: 0, translateX: i % 2 === 0 ? -50 : 50, translateY: -50 }}
+						initial={{
+							opacity: 0,
+							translateX: i % 2 === 0 ? -50 : 50,
+							translateY: -50,
+						}}
 						whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
 						transition={{ duration: 0.5, delay: i * 0.3 }}
 						key={i}
@@ -55,11 +58,21 @@ const Services = () => {
 							<img src={item.logo} alt={i} />
 						</div>
 						<span>{item.title}</span>
-						{item.list.map((litem, id) => (
-							<span key={id}>
-								<AiOutlinePlus /> {litem}
-							</span>
-						))}
+						<motion.div
+							className="services-text"
+							initial={{ opacity: 0 }}
+							whileHover={{ opacity: [0, 1], }}
+							transition={{ duration: 0.5 }}
+						>
+							<span>{item.info}</span>
+							<button className="info-icon">
+								{" "}
+								<p>Learn More</p>{" "}
+								<span>
+									<BsArrowRight />
+								</span>
+							</button>
+						</motion.div>
 					</motion.div>
 				))}
 			</div>

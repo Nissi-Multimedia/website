@@ -26,7 +26,7 @@ const Header = () => {
 							className="sub"
 						>
 							<p className="p-text">
-								Choose Nissi as your digital marketing agency and propel your
+								Choose us as your digital marketing agency and propel your
 								business to new heights with our award-winning digital marketing
 								services and technology platform
 							</p>
@@ -35,10 +35,20 @@ const Header = () => {
 
 					<motion.div
 						whileInView={{ opacity: [0, 1] }}
-						transition={{ duration: 0.5, delayChildren: 0.5 }}
+						transition={{ duration: 0.5, delayChildren: 0.8 }}
 						className="app__header-home-banner"
 					>
-						<img src={images.homepage} alt='banner' />
+						<motion.img
+							initial={{ scale: 0.5 }}
+							animate={{ scale: 1 }}
+							transition={{ duration: 0.8 }}
+							src={images.homepage}
+							style={{
+								borderTopLeftRadius: "0.5rem",
+								borderBottomLeftRadius: "0.5rem",
+							}}
+							alt="banner"
+						/>
 					</motion.div>
 				</div>
 			</div>

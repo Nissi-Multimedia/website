@@ -10,18 +10,15 @@ import {
 	Testimonials,
 } from "./containers";
 
-import { Navbar, Skill } from "./components";
 
 const App = () => {
 	return (
 		<div className="app">
-			{/* <Navbar /> */}
-			{/* <Skill /> */}
 			<Header />
 			<About />
 			<Services />
 			<Catalog />
-			<Testimonials />
+			{/* <Testimonials /> */}
 			<Contact />
 			<Footer />
 		</div>

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 :root {
-	--font-base: 'Montserrat', sans-serif;
+	--font-base: "Montserrat", sans-serif;
 
 	--primary-color: #edf2f8;
 	--secondary-color: rgb(221, 27, 27);
@@ -10,7 +10,7 @@
 	--gray-color: #959494;
 	--brown-color: #46364a;
 	--white-color: #ffffff;
-	--misc-color: #DBE2E8 ;
+	--misc-color: #dbe2e8;
 }
 
 * {
@@ -20,3 +20,6 @@
 	scroll-behavior: smooth;
 }
 
+body {
+	overflow-x: hidden;
+}

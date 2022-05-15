@@ -1,50 +1,129 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { images } from "./../../constants";
+import React, { useState } from "react";
+import { motion, AnimatePresence, Variants, useAnimation } from "framer-motion";
+
+import { images } from "../../constants";
 import { BsArrowRight } from "react-icons/bs";
 import "./About.scss";
 
+// const imgVariants: Variants = {
+// 	offscreen: {
+// 		x: -300
+// 	},
+// 	onscreen: {
+// 		x: 0,
+// 		transition: {
+// 			type: "spring",
+// 			bounce: 0.5,
+// 			duration: 0.8
+// 		}
+// 	}
+// }
+
 const About = () => {
+	const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
+
+	const divAnimationControls = useAnimation();
+
+	const divAnimationVariants = {
+		init: {
+			y: 0,
+		},
+		anim: {
+			y: -20,
+			transition: {
+				type: "tween",
+				repeat: 1,
+				repeatType: "reverse",
+			},
+		},
+	};
+
 	return (
 		<>
 			<div className="app__about">
 				<div className="app__about-image">
-					{" "}
-					<img src={images.homepage} alt="about" />
+					<motion.img
+						initial={{
+							x: -100,
+							opacity: 0,
+						}}
+						whileInView={{
+							x: 0,
+							opacity: 1,
+							transition: {
+								type: "spring",
+								bounce: 0.5,
+								duration: 0.7,
+							},
+						}}
+						src={images.homepage}
+						alt="about"
+					/>
 				</div>
+
 				<div style={{ flex: 0.1 }}></div>
 				<div className="app__about-info">
-					<span className="head-text">
+					<motion.span
+						className="head-text"
+						whileInView={{ opacity: [0, 1] }}
+						transition={{ duration: 0.8 }}
+					>
 						Work with us, <br /> Not for us
-					</span>
+					</motion.span>
 
-					<span className="s-text">
+					<motion.span
+						className="s-text"
+						whileInView={{
+							y: [100, 0],
+							opacity: [0, 1],
+						}}
+						transition={{
+							delay: 0.2,
+							duration: 1.5,
+						}}
+					>
 						There are more than 100 definitions of marketing. But we understand
 						that marketing is what happens in every company here and now;
 						finding new solutions and launching new products.
-					</span>
+					</motion.span>
 
-					<button className="info-icon">
+					<motion.button
+						className="info-icon"
+						whileInView={{
+							y: [100, 0],
+							opacity: [0, 1],
+						}}
+						transition={{
+							delay: 0.4,
+							duration: 1.6,
+						}}
+					>
 						{" "}
 						<p>Learn More</p>{" "}
 						<span>
 							<BsArrowRight />
 						</span>
-					</button>
+					</motion.button>
 				</div>
 			</div>
 
 			<div className="app__about-extra">
-				<div className="extra-head">
+				<motion.div className="extra-head"
+				whileInView={{ opacity: [0,1]}}
+				transition={{ duration: 0.8}}>
 					{" "}
 					<span>
 						Grow with A The Digital <br /> Marketing Agency You <br /> can
 						trust?
 					</span>
-				</div>
+				</motion.div>
 				<div className="extra-info">
 					<div className="info-space">
-						<div className="space-text">
+						<motion.div
+							className="space-text"
+							whileInView={{ opacity: [0, 1], x: [-80, 0] }}
+							transition={{ type: "spring", bounce: 0.3, duration: 0.7, delay: 0.2 }}
+						>
 							<span className="s-text">
 								Our digital marketing expers have put together thousands of
 								successful digital marketing campaigns for businesses looking to
@@ -52,18 +131,36 @@ const About = () => {
 								traffic. They'll do the same for you. Request a free strategy
 								proposal and get a game plan for elite revenue generation
 							</span>
-						</div>
+						</motion.div>
 
-						<div className="space-banner">
+						<motion.div
+							className="space-banner"
+							whileHover={{
+								scale: 1.1,
+								originX: 0,
+							}}
+							transition={{ type: "spring", stiffness: 300 }}
+						>
 							<img src={images.infoSpace} alt="info space" />
-						</div>
+						</motion.div>
 					</div>
 
 					{/* <div style={{flex:0.1}}></div> */}
 
-					<div className="info-banner">
+					<motion.div
+						className="info-banner"
+						initial={{ x: 300 }}
+						whileInView={{
+							x: 0,
+							transition: {
+								type: "spring",
+								stiffness: 300,
+								delay: 0.3,
+							},
+						}}
+					>
 						<img src={images.infoBanner} alt="info Banner" />
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</>
