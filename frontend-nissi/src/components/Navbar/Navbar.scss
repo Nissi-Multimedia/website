@@ -12,6 +12,7 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     z-index: 2;
+    position: relative;
 }
 
 .app__navbar-logo {

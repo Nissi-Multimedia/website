@@ -47,7 +47,7 @@
         margin-bottom: 1rem;
     }
 
-    @media screen and (max-width: 1440px) and (min-width: 451px ) {
+    @media screen and (max-width: 1440px) and (min-width: 451px) {
         font-size: 3rem;
         margin-bottom: 1.5rem;
     }
@@ -102,7 +102,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     border: 0;
-    border-bottom: 1px solid var(--black-color);
     background-color: transparent;
     white-space: nowrap;
     margin-top: 2rem;
@@ -110,10 +109,14 @@
 
     font-size: 1rem;
     font-weight: 800;
+
+    &::after {
+        border-bottom: 1px solid var(--black-color);
+    }
     span {
         padding: 0;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     p {
         font-family: var(--font-base);

@@ -16,12 +16,20 @@ const Contact = () => {
 					Discover how we can make your business grow
 				</span>
 				<button className="info-icon">
-						{" "}
-						<p>Contact Us</p>{" "}
-						<span>
-							<BsArrowRight />
-						</span>
-					</button>
+					{" "}
+					<motion.p
+						whileHover={{ marginRight: [10, 20] }}
+						transition={{ duration: 1 }}
+					>
+						Contact Us
+					</motion.p>
+					<motion.span
+						whileHover={{ x: [0, 10] }}
+						transition={{ duration: 1.2 }}
+					>
+						<BsArrowRight />
+					</motion.span>
+				</button>
 			</motion.div>
 		</div>
 	);

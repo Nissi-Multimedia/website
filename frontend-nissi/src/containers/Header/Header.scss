@@ -5,6 +5,7 @@
     padding: 1rem 0;
 }
 .app__header {
+    position: relative;
     padding: 6rem 0 0 2rem;
     flex: 1;
     flex-direction: column;
@@ -19,6 +20,11 @@
         padding: 6rem 1rem 2rem;
     }
 }
+
+// #tsparticles {
+//     position: absolute;
+//     z-index: 0;
+// }
 
 .app__header-home {
     display: flex;
@@ -59,15 +65,13 @@
         img {
             width: 100%;
             box-shadow: rgba(99, 99, 99, 0.4) -5px 5px, rgba(99, 99, 99, 0.3) -10px 10px,
-                rgba(99, 99, 99, 0.2) -15px 15px, rgba(99, 99, 99, 0.1) -20px 20px,
-                rgba(99, 99, 99, 0.05) -25px 25px;
+                rgba(99, 99, 99, 0.2) -15px 15px, rgba(99, 99, 99, 0.1) -20px 20px, rgba(99, 99, 99, 0.05) -25px 25px;
         }
 
         @media screen and (max-width: 450px) {
             display: none;
             flex: 0;
         }
-
     }
 
     @media screen and (max-width: 900px) {

@@ -3,10 +3,80 @@ import "./Header.scss";
 import { Navbar } from "./../../components";
 import { images } from "./../../constants";
 import { motion } from "framer-motion";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const Header = () => {
+	const particlesInit = async (main) => {
+		// console.log(main);
+
+		// you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+		// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+		// starting from v2 you can add only the features you need reducing the bundle size
+		await loadFull(main);
+	};
+
+	const particlesLoaded = (container) => {
+		// console.log(container);
+	};
 	return (
 		<div id="home">
+			<Particles
+				id="tsparticles"
+				init={particlesInit}
+				loaded={particlesLoaded}
+				options={{
+					fullScreen: {
+						enable: false,
+						zIndex: -1,
+					},
+					style: {
+						position: "absolute",
+					},
+					background: {
+						color: "#000",
+					},
+					detectRetina: false,
+					fpsLimit: 30,
+
+					particles: {
+						color: {
+							value: "#fff",
+						},
+						number: {
+							density: {
+								enable: true,
+								area: 1080,
+							},
+							limit: 0,
+							value: 400,
+						},
+						opacity: {
+							animation: {
+								enable: true,
+								minimumValue: 0.2,
+								speed: 1.5,
+								sync: false,
+							},
+							random: {
+								enable: true,
+								minimumValue: 0.1,
+							},
+							value: 1,
+						},
+						shape: {
+							type: "circle",
+						},
+						size: {
+							random: {
+								enable: true,
+								minimumValue: 0.05,
+							},
+							value: 2,
+						},
+					},
+				}}
+			/>
 			<Navbar />
 			<div className="app__header">
 				<div className="app__header-home">

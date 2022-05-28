@@ -30,10 +30,18 @@ const Card = (props) => {
 				<span className="info-content">{props.content}</span>
 				<button className="info-icon">
 					{" "}
-					<p>Learn More</p>{" "}
-					<span>
+					<motion.p
+						whileHover={{ marginRight: [10, 20] }}
+						transition={{ duration: 1 }}
+					>
+						Learn More
+					</motion.p>{" "}
+					<motion.span
+						whileHover={{ x: [0, 10] }}
+						transition={{ duration: 1.2 }}
+					>
 						<BsArrowRight />
-					</span>
+					</motion.span>
 				</button>
 			</div>
 		</motion.div>

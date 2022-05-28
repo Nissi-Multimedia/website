@@ -61,16 +61,24 @@ const Services = () => {
 						<motion.div
 							className="services-text"
 							initial={{ opacity: 0 }}
-							whileHover={{ opacity: [0, 1], }}
+							whileHover={{ opacity: [0, 1] }}
 							transition={{ duration: 0.5 }}
 						>
 							<span>{item.info}</span>
 							<button className="info-icon">
 								{" "}
-								<p>Learn More</p>{" "}
-								<span>
+								<motion.p
+									whileHover={{ marginRight: [10, 20] }}
+									transition={{ duration: 1 }}
+								>
+									Learn More
+								</motion.p>{" "}
+								<motion.span
+									whileHover={{ x: [0, 10] }}
+									transition={{ duration: 1.2 }}
+								>
 									<BsArrowRight />
-								</span>
+								</motion.span>
 							</button>
 						</motion.div>
 					</motion.div>
