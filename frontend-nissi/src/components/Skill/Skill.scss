@@ -1,0 +1,46 @@
+.app__about-skill {
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 200px;
+    // border-radius: 0 6rem 0 0;
+    // padding: 0 1rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    overflow: hidden;
+    
+    .icon-container {
+        flex: 0.4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: rgba(221,27,27,0.2);
+        // border-radius:0 40% 40% 40%;
+        overflow: hidden;
+        right:  0;
+
+        svg {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    .skill-info {
+        flex: 0.6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0.5rem;
+
+        p{
+            color: #aeacae;
+        }
+
+        p:nth-child(1){
+            margin-bottom: 0.5rem;
+        }
+    }
+}

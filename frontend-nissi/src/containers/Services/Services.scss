@@ -1,0 +1,123 @@
+.app__services {
+    background-color: var(--white-color);
+    min-height: 100vh;
+    padding: 3rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+
+    .app__services-title {
+        flex: 0.5;
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        span {
+            color: var(--black-color);
+        }
+        .title-text {
+            color: var(--gray-color);
+            font-size: 1.2rem;
+            width: 30%;
+            margin: 1rem 0;
+        }
+    }
+
+    .app__services-content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        min-width: 288px;
+        // max-width: 1440px;
+
+        .content-item {
+            flex: 0.5;
+            // margin-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: var(--white-color);
+            background-color: black;
+            min-height: 40vh;
+            width: 30vw;
+            height: 700px;
+            transition: transform 0.4s ease-in-out;
+
+            &:hover {
+                transform: translate3d(0, -5px, 0) !important;
+            }
+
+            &:nth-child(1) {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+                    url("./../../assets/brand-imagebg.jpg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+
+                transition: all 500ms ease-in-out;
+            }
+
+            &:nth-child(2) {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+                    url("./../../assets/marketingbg.jpg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+
+            &:nth-child(3) {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+                    url("./../../assets/audioVisualbg.jpg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+
+            &:nth-child(4) {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+                    url("./../../assets/webDesignbg.jpg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+
+            padding: 2rem 0 0 4rem;
+
+            .item-logo {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 50%;
+                margin-bottom: 2rem;
+
+                img {
+                    width: 50px;
+                }
+            }
+            .services-text {
+                // position: relative;
+                margin: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 100%;
+                cursor: pointer;
+
+                span {
+                    color: var(--white-color);
+                    font-size: 1rem;
+                }
+
+                button {
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.app__about {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1rem;
+
+    background-color: var(--white-color);
+
+    .app__about-image {
+        flex: 0.4;
+        left: 0;
+        width: 100%;
+        margin-right: 2rem;
+
+        img {
+            width: 100%;
+            // border-radius: 0 1rem 1rem 0;
+        }
+
+        margin-right: 2rem;
+    }
+
+    .app__about-info {
+        flex: 0.3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media screen and (max-width: 900px) {
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.app__about-extra {
+    background-color: var(--black-color);
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 0 0;
+
+    .extra-head {
+        flex: 0.7;
+        margin-left: 10rem;
+
+        // line-height: 10%;
+        margin-bottom: 2rem;
+
+        span {
+            font-size: 4.3rem;
+            font-weight: 600;
+
+            @media screen and (max-width: 900px) {
+                font-size: 3rem;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            margin-left: 0;
+        }
+    }
+
+    .extra-info {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+
+        .info-space {
+            flex: 0.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 2rem 0;
+
+            .space-text {
+                flex: 0.4;
+                margin-left: 10rem;
+                width: 80%;
+                margin-bottom: 4rem;
+            }
+
+            .space-banner {
+                flex: 0.5;
+
+                img {
+                    width: 80%;
+                    // border-radius: 0 1rem 1rem 0;
+                    box-shadow: rgba(99, 99, 99, 0.4) 5px 5px, rgba(99, 99, 99, 0.3) 10px 10px,
+                        rgba(99, 99, 99, 0.2) 15px 15px, rgba(99, 99, 99, 0.1) 20px 20px,
+                        rgba(99, 99, 99, 0.05) 25px 25px;
+                }
+            }
+        }
+
+        .info-banner {
+            flex: 0.35;
+            padding: 0 0 2rem;
+            right: 0;
+            
+            img {
+                width: 100%;
+                // border-radius: 1rem 0 0 1rem;
+            }
+        }
+    }
+}
